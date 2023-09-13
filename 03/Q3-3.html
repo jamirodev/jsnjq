@@ -9,7 +9,8 @@
 <script>
     var price = 30000;  // 음식 값
     var service = 2;   // 1: 매우 만족, 2: 만족, 3: 불만족
-
+    var service_result = "";
+    var tip = 0.0;
     if (service == 1) {
         service_result = "매우 만족";
         tip = price * 0.15;
@@ -22,7 +23,7 @@
         service_result = "불만족";
         tip = price * 0.05;
     }
-    var message;
+    var message = "";
     message = "- 음식값 : " + price + "원<br>";
     message += "- 서비스 만족도 : " + service_result + "<br>";
     message += "- 팁 : " + tip + "원";
